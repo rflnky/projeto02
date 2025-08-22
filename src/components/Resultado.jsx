@@ -4,62 +4,60 @@ import "../css/resultado.css"
 const TabelaIMC = ({ resultado }) => {
     if (resultado < 18) {
         return (
-            <>
-                <h1>Abaixo do Peso</h1>
-                <h2>Menor que 18</h2>
-            </>
+            <tr>
+                <td>Abaixo do Peso</td>
+                <td>Menor que 18</td>
+            </tr>
         )
     } else if (resultado >= 18 && resultado < 25) {
         return (
-            <>
-                <h1>Peso Normal</h1>
-                <h2>18 - 24.9</h2>
-            </>
+            <tr>
+                <td>Peso Normal</td>
+                <td>18 - 24.9</td>
+            </tr>
         )
     } else if (resultado >= 25 && resultado < 30) {
         return (
-            <>
-                <h1>Sobrepeso</h1>
-                <h2>25 - 29.9</h2>
-            </>
+            <tr>
+                <td>Sobrepeso</td>
+                <td>25 - 29.9</td>
+            </tr>
         )
     } else if (resultado >= 30 && resultado < 35) {
         return (
-            <>
-                <h1>Obesidade</h1>
-                <h2>30 - 34.9</h2>
-            </>
+            <tr>
+                <td>Obesidade</td>
+                <td>30 - 34.9</td>
+            </tr>
         )
     } else {
         return (
-            <>
-                <h1>Obesidade Mórbida</h1>
-                <h2>Maior ou igual a 35</h2>
-            </>
+            <tr>
+                <td>Obesidade Mórbida</td>
+                <td>Maior ou igual a 35</td>
+            </tr>
         )
     }
 }
 
-
-
-//destruct destruturando  = acesso propriedades de outro componentes
-function Resultado({resultado}){
+// componente principal
+function Resultado({ resultado }) {
     return (
         <div>
             <div className="resultado">
                 <h2>
-                    Seu IMC é de <span>(resultado)</span>
+                    Seu IMC é de <span>{resultado}</span>
                 </h2>
             </div>
             <table>
-                <head className="tabelaheader">
+                <thead className="tabelaheader">
                     <tr>
                         <th>Classificação</th>
                         <th>IMC</th>
                     </tr>
-                </head>
+                </thead>
                 <tbody className="tableBody">
-                    <tr>(TabelaIMC(resultado))</tr>
+                    <TabelaIMC resultado={resultado} />
                 </tbody>
             </table>
         </div>
