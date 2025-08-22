@@ -40,12 +40,28 @@ const TabelaIMC = ({ resultado }) => {
     }
 }
 
-function Resultado() {
+
+
+//destruct destruturando  = acesso propriedades de outro componentes
+function Resultado({resultado}){
     return (
         <div>
-            <h1>Resultado do IMC</h1>
-            {/* Exemplo de uso */}
-            <TabelaIMC resultado={22}/>
+            <div className="resultado">
+                <h2>
+                    Seu IMC é de <span>(resultado)</span>
+                </h2>
+            </div>
+            <table>
+                <head className="tabelaheader">
+                    <tr>
+                        <th>Classificação</th>
+                        <th>IMC</th>
+                    </tr>
+                </head>
+                <tbody className="tableBody">
+                    <tr>(TabelaIMC(resultado))</tr>
+                </tbody>
+            </table>
         </div>
     )
 }
