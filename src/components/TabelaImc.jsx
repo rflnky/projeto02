@@ -1,3 +1,6 @@
+import '../css/estilo.css'
+import '../css/header.css'
+
 const TabelaImc =(resultado)=>{
     if(resultado < 18){
         return(

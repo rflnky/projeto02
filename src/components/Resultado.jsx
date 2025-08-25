@@ -1,7 +1,8 @@
 import '../css/global.css'
 import '../css/resultado.css'
 import TabelaImc from './TabelaImc'
-
+import '../css/estilo.css'
+import '../css/header.css'
 
 //destruct -desestruturação = acessa propridades de outro componentes
 function Resultado({resultado}){

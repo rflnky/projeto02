@@ -3,7 +3,7 @@
     --fontColor2:#000;
     --bgColor1:#030436;
     --bgColor2:#2d30f0;
-    --bgColor2:#f1e9e9;
+    --bgColor3:#f1e9e9;
 }
 
 *{
@@ -16,7 +16,7 @@
     height:100vh;
     display:flex;
     flex-direction:column;
-    aling-items:center;
+    align-items:center;
     justify-content:center;
 }
 
@@ -25,6 +25,6 @@
     .container{
         justify-content:start;
         padding: 15px;
-        
+
     }
 }
