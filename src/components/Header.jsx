@@ -1,15 +1,14 @@
-import "../css/header.css"
-import "../css/global.css"
-
-
+import '../css/header.css'
+import '../css/global.css'
 
 function Header(){
-    //Fragments
     return (
+        // fragments
         <>
-            <div className="header">
-                <h1>Calculadora IMC</h1>
-            </div>
+        <div className="header">
+            <h1>Calculadora IMC</h1>
+
+        </div>
         </>
     )
 }
